@@ -9,13 +9,19 @@ $smarty->setCacheDir('smarty/cache/');
 $smarty->caching = true;
 $smarty->cache_lifetime = 120;
 
-$smarty->assign('host', 'http://host.local/pics/');
+$smarty->assign('host', $host);
 $smarty->assign('page_title', 'PICS');
 
 require_once('autoload.php');
 $request = new Input();
 $q = $request->get('q');
-$args = explode('/', $q);
+$args = array('front', 'index');
+if ($q) {
+	$args = explode('/', $q);
+	if (count($args) < 2) {
+		$args[1] = 'index';
+	}
+}
 $controller = $args[0];
 $action = $args[1];
 

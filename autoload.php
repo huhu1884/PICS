@@ -6,8 +6,11 @@ class AutoLoader {
   );
 
   public static function load($class) {
+    if (isset(self::$map[$class])) {
+      $class = self::$map[$class];
+    }
     $file = strtr('./classes/@file.class', array(
-      '@file' => (self::$map[$class] ? self::$map[$class] : $class),
+      '@file' => $class,
     ));
     if (is_file($file)) {
       require_once($file);

@@ -1,3 +1,3 @@
 {include file="header.tpl"}
-<a href="javascript:void(0);">UPLOAD</a>
+<a class="fancybox fancybox.ajax" href="{$host}box/uploader">UPLOAD</a>
 {include file="footer.tpl"}
