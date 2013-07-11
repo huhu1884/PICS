@@ -1,0 +1,21 @@
+<?php
+
+class CoreController {
+
+  private $smarty = null;
+
+  public function __construct($smarty) {
+    $this->smarty = $smarty;
+  }
+
+  protected function render($template, $data) {
+    foreach ($data as $key => $value) {
+      $this->smarty->assign($key, $value);
+    }
+    $template .= '.tpl';
+    $this->smarty->display($template);
+  }
+
+}
+
+?>

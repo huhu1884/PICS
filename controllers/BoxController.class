@@ -1,0 +1,14 @@
+<?php
+
+class BoxController extends CoreController {
+
+  public function uploaderAction() {
+    $data = Array(
+      'test' => 'aaaaaaaaaaaaaa',
+    );
+    $this->render('box/uploader', $data);
+  }
+
+}
+
+?>
