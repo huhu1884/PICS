@@ -102,3 +102,81 @@ hr:after {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dddddd', endColorstr='#00dddddd',GradientType=1 ); /* IE6-8 */
 
 }
+
+/* upload preview */
+#uploader {
+    min-width: 500px;
+    border: 1px solid #888;
+    border-top: 1px solid #888;
+    background: #ccc;
+    padding: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,.15), 0px 2px 1px rgba(0,0,0,.10), 0px 3px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,.15), 0px 2px 1px rgba(0,0,0,.10), 0px 3px 1px rgba(0,0,0,.05);
+    box-shadow: 0px 1px 1px rgba(0,0,0,.15), 0px 2px 1px rgba(0,0,0,.10), 0px 3px 1px rgba(0,0,0,.05);
+}
+#uploader .action-bar {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #888;
+}
+#uploader .action-bar a {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    background: #0081c2;
+    color: #f4f4f4;
+    text-decoration: none;
+}
+#uploader .action-bar a:hover {
+    background: #71b2d0;
+    cursor: auto;
+}
+#uploader .action-bar a.right {
+    background: #dd4b39;
+    float: right;
+}
+#uploader .action-bar a.right:hover {
+    background: #d59392;
+}
+#uploader .msg {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px 5px 0px 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#uploader .preview-area{
+    list-style:none;
+}
+#uploader .preview-area li{
+    display: block;
+    border-top: 1px solid #888;
+    height: 48px;
+    margin-left: -40px;
+}
+#uploader .preview-area li img{
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+}
+#uploader .preview-area li span{
+    height: 25px;
+    line-height: 25px;
+    padding: 5px;
+    display: inline-block;
+}
+#uploader .preview-area li a{
+    height: 24px;
+    line-height: 24px;
+    padding: 5px;
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+}
