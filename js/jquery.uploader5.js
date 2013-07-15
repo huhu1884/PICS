@@ -181,4 +181,53 @@
         }
     };
 
+    $.uploader5.isFile = function(file) {
+        return (file instanceof File);
+    };
+
+    $.uploader5.isImage = function(file) {
+        if (!$.uploader5.isFile(file)) {
+            return false;
+        }
+        return /^image\/(jpeg|png)$/.test(file.type);
+    };
+
+    $.uploader5.readDataURL = function(file, callback) {
+        if (!$.uploader5.isFile(file)) {
+            throw('This is not a file.');
+        }
+        var reader = new FileReader();
+        reader.onload = (function(f){
+            return function(e) {
+                f.dataURL = this.result;
+                callback(f);
+            }
+        })(file);
+        reader.readAsDataURL(file);
+    };
+
+    $.uploader5.imageSizeFixed = function(file, maxWidth, maxHeight, callback) {
+        if (!$.uploader5.isImage(file)) {
+            throw('This is not a image.');
+        }
+        $.uploader5.readDataURL(file, function(f) {
+            var img = new Image();
+            img.src = f.dataURL;
+            $(img).bind('load', function() {
+                var realWidth = this.width;
+                var realHeight = this.height;
+                var realRate = realWidth / realHeight;
+                var maxRate = maxWidth / maxHeight;
+                if (realRate > maxRate) {
+                    this.width = maxWidth ;
+                    this.height = maxWidth * ( 1 / realRate ) ;
+                } else {
+                    this.height = maxHeight;
+                    this.width = maxHeight * realRate;
+                }
+                callback(img);
+            });
+        });
+    }
+
 })(jQuery);

@@ -18,11 +18,13 @@ $(function() {
 //                    var $chk = $('<input type="checkbox" />').attr('fileid', file.id);
 //                    var $bar = $('<span></span>').attr('fileid', file.id);
                     var $spn = $('<span></span>').text(file.name);
-                    read(file, function(file) {
-                        thumb(file.dataURL, 48, 48, function(img) {
-                            $('<li></li>').attr('fileid', file.id).append(img).append($spn).append($del).appendTo($('.preview-area'));
-                        });
-                    });
+                    $.uploader5.imageSizeFixed(file, 48, 48,
+                        (function(f) {
+                            return function(img) {
+                                $('<li></li>').attr('fileid', f.id).append(img).append($spn).append($del).appendTo($('.preview-area'));
+                            };
+                        })(file)
+                    );
                 }
             }
             if (event.up5Action.type == 'delete') {
@@ -30,35 +32,4 @@ $(function() {
             }
         });
     };
-
-    var thumb = function(src, maxWidth, maxHeight, callback) {
-        var img = new Image();
-        img.src = src;
-        $(img).bind('load', function() {
-            var realWidth = this.width;
-            var realHeight = this.height;
-            var realRate = realWidth / realHeight;
-            var maxRate = maxWidth / maxHeight;
-            if (realRate > maxRate) {
-                this.width = maxWidth ;
-                this.height = maxWidth * ( 1 / realRate ) ;
-            } else {
-                this.height = maxHeight;
-                this.width = maxHeight * realRate;
-            }
-            callback(img);
-        });
-    };
-
-    var read = function(file, callback) {
-        var reader = new FileReader();
-        reader.onload = (function(f){
-            return function(e) {
-                console.log(this);
-                f.dataURL = this.result;
-                callback(f);
-            }
-        })(file);
-        reader.readAsDataURL(file);
-    }
 });
