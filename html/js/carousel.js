@@ -293,7 +293,7 @@
          * slide effect
          */
         var changeSlideSlide = function (outSlide, inSlide, slideDirection) {
-            var unmovedPosition = {'left': 0},
+            var unmovedPosition = {'left': '150px'},
                 duration = plugin.settings.duration;
 
             if (slideDirection !== -1) {

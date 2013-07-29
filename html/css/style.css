@@ -6,6 +6,14 @@
       float: left;
   }
 }
+@media (min-width: 983px) and (max-width: 1461px) {
+  .metrouicss .page.snapped {
+      max-width: 322px;
+  }
+  .metrouicss .page.fill {
+      float: left;
+  }
+}
 @media (max-width: 982px) {
   .metrouicss .page.snapped {
       width: 100%;

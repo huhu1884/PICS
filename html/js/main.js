@@ -1,5 +1,11 @@
 $(function() {
 
+    $(window).on('resize', function() {
+        var width = $(this).width();
+        var leftWidth = $('section:eq(0)').width();
+        $('section:eq(1)').width(width - leftWidth - 2);
+    });
+
     $('.login').click(function() {
         $.Dialog({
             'title': 'Login',
