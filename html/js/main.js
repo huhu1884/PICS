@@ -1,5 +1,14 @@
 $(function() {
 
+    $('html').on("click", function(e){
+        if(e.originalEvent && $(e.originalEvent.target).parents('.user-login').length == 0)
+            $('.dropdown-menu').hide();
+    });
+
+    $('.user-login').on('click', function() {
+        $('.dropdown-menu').show();
+    });
+
     $(window).on('resize', function() {
         var width = $(this).width();
         var leftWidth = $('section:eq(0)').width();

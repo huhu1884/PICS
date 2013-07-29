@@ -1,24 +1,6 @@
-@media (min-width: 1462px) {
-  .metrouicss .page.snapped {
-      max-width: 482px;
-  }
-  .metrouicss .page.fill {
-      float: left;
-  }
+.metrouicss .spanf {
+  width: 380px;
 }
-@media (min-width: 983px) and (max-width: 1461px) {
-  .metrouicss .page.snapped {
-      max-width: 322px;
-  }
-  .metrouicss .page.fill {
-      float: left;
-  }
-}
-@media (max-width: 982px) {
-  .metrouicss .page.snapped {
-      width: 100%;
-  }
-  .metrouicss .page.fill {
-      display: none;
-  }
+.metrouicss .spanfh {
+  width: 180px;
 }

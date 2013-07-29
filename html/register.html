@@ -8,6 +8,7 @@
 
     <link href="css/modern.css" rel="stylesheet">
     <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <title>Metro UI CSS</title>
 </head>
@@ -23,10 +24,94 @@
             </div>
         </header>
 
-        <section class="page-region">
-            <div class="page-region-content"></div>
+        <section class="page-region" style="width: 500px;">
+            <div class="page-region-content">
+                <form>
+                    <div class="grid">
+                        <div class="row">
+                            <div class="spanfh">
+                                <h2>Name</h2>
+                                <div class="input-control text">
+                                    <input type="text" placeholder="First Name" />
+                                    <button class="btn-clear" tabindex="-1"></button>
+                                </div>
+                            </div>
+                            <div class="spanfh">
+                                <h2>&nbsp;</h2>
+                                <div class="input-control text">
+                                    <input type="text" placeholder="Last Name" />
+                                    <button class="btn-clear" tabindex="-1"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="spanf">
+                                <h2>Gender</h2>
+                                <label class="input-control radio">
+                                    <input type="radio" name="gender" checked="checked">
+                                    <span class="helper">Female</span>
+                                </label>
+                                <label class="input-control radio">
+                                    <input type="radio" name="gender">
+                                    <span class="helper">Male</span>
+                                </label>
+                                <label class="input-control radio">
+                                    <input type="radio" name="gender">
+                                    <span class="helper">Other</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="spanf">
+                                <h2>Birthday</h2>
+                                <div class="input-control text datepicker" data-role="datepicker">
+                                    <input type="text" />
+                                    <button class="btn-date" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="spanf">
+                                <h2>Email</h2>
+                                <div class="input-control text">
+                                    <input type="text" />
+                                    <button class="btn-clear" tabindex="-1"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="spanf">
+                                <h2>Password</h2>
+                                <div class="input-control password">
+                                    <input type="password" />
+                                    <button class="btn-reveal" tabindex="-1"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="spanf">
+                                <h2>Confirm your Password</h2>
+                                <div class="input-control password">
+                                    <input type="password" />
+                                    <button class="btn-reveal" tabindex="-1"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="spanf">
+                                <input type="submit" value="Submit"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
     </div>
 
-    </body>
+<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/moment_langs.js"></script>
+<script type="text/javascript" src="js/input-control.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+</body>
 </html>
