@@ -4,3 +4,51 @@
 .metrouicss .spanfh {
   width: 180px;
 }
+.metrouicss .bg-color-gray {
+  background-color: #c0c0c0 !important;
+}
+.metrouicss .charms.narrow {
+  min-width: 134px;
+}
+.metrouicss .charms.narrow ul {
+  margin: 12px 0;
+  list-style: none;
+  top: 100%;
+  z-index: 11010;
+  float: left;
+  min-width: 134px;
+}
+.metrouicss .charms.narrow ul a {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 24pt;
+  font-smooth: always;
+  color: #000000;
+  display: block;
+  width: 100%;
+  padding: 3px 24px;
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+}
+.metrouicss .charms.narrow ul a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.metrouicss .charms.narrow ul a:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.metrouicss .charms.narrow ul a:hover {
+  background-color: #888888 !important;
+}
+.metrouicss .charms.narrow ul a.current {
+  background-color: #d8d8d8 !important;
+}
+.metrouicss .charms.narrow ul li {
+  display: list-item;
+  line-height: 20px;
+}
+.metrouicss .label.disable {
+  background-color: rgba(0, 0, 0, 0.8);
+}
