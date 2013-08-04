@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PhotoSwipe</title>
+	<meta name="author" content="Sam Lan" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+	
+	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
+	<script type="text/javascript" src="js/rating.js"></script>
+	
+	
+	<script type="text/javascript">
+
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				var options = {};
+				$(".image-collection a").photoSwipe(options);
+			
+			});
+			
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+	</script>
+	
+</head>
+<body class="metrouicss">
+
+<div class="page secondary">
+
+	<header class="page-header">
+		<div class="page-header-content">
+			<h1>Viewer<small></small></h1>
+			<a href="index.html" class="back-button big page-back"></a>
+		</div>
+	</header>
+
+	<div class="page-region">
+		<div class="page-region-content">
+			<div style="overflow: auto; max-width: 960px;">
+				<div style="float: left;min-width: 300px;">
+					<div class="rating" data-role="rating" data-param-vote="on" data-param-rating="0" style="float: left;"></div>
+					<h2>&nbsp;4.7&nbsp;</h2>
+				</div>
+				<button class="default" style="float: right;"><i class="icon-bookmark-2"></i>Collect</button>
+			</div>
+			<pre style="max-width: 950px; margin-bottom: 10px;">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description</pre>
+			<div class="image-collection p4x3">
+          <div><a href="files/images/1.jpg"><img src="files/images/1.jpg" alt=""></a></div>
+          <div><a href="files/images/a.jpg"><img src="files/images/a.jpg" alt=""></a></div>
+          <div><a href="files/images/c.jpg"><img src="files/images/c.jpg" alt=""></a></div>
+          <div><a href="files/images/d.png"><img src="files/images/d.png" alt=""></a></div>
+      </div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
