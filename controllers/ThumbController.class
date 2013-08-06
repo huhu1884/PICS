@@ -1,0 +1,15 @@
+<?php
+
+class ThumbController extends APIController {
+
+  function resizeAction($pars) {
+    $size = explode('x', $pars[0]);
+    $file = $pars[1];
+    $thumb = PhpThumbFactory::create(dirname(dirname(__FILE__)) . '/html/files/images/' . $file);
+    $thumb->adaptiveResize($size[0], $size[1]);
+    $thumb->show();
+  }
+
+}
+
+?>
