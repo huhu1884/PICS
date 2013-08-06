@@ -1,5 +1,15 @@
 $(function() {
 
+    var $container = $('#container');
+    $container.imagesLoaded(function() {
+        // initialize
+        $container.masonry({
+          columnWidth: 200,
+          itemSelector: '.item'
+        });
+    });
+
+
     $('html').on("click", function(e){
         if(e.originalEvent && $(e.originalEvent.target).parents('.user-login').length == 0)
             $('.dropdown-menu').hide();
@@ -31,13 +41,13 @@ $(function() {
         return false;
     });
 
-	$('.uploader-box').fancybox({
-        type: 'ajax',
-        afterShow: function() {
-            $.fancybox.update();
-            bindUploader();
-        }
-    });
+	// $('.uploader-box').fancybox({
+ //        type: 'ajax',
+ //        afterShow: function() {
+ //            $.fancybox.update();
+ //            bindUploader();
+ //        }
+ //    });
 
     var bindUploader = function() {
         var $uploader = $('.select-file').uploader5({});
